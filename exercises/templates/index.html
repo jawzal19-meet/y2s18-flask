@@ -1,1 +1,21 @@
 <!-- Put the HTML template for your page here! -->
+<!doctype html> 
+	<html>
+		<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		</head>
+
+		<body> 
+			<h1> voleyball! </h1> 
+			<p> it's fun </p> 
+			<h2> favorite players: </h2>
+			<ul>
+                {% for player in players %}
+                <li> {{player}} </li>
+                {% endfor %}
+            </ul>
+
+		</body> 
+	</html>
+
+	
