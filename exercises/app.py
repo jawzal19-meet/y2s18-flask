@@ -10,7 +10,7 @@ def favSport():
 "index.html")
 
 @app.route('/')
-def backgroundColor():
+def Color():
     return render_template(
 "index.html")
 
@@ -19,7 +19,8 @@ def favPlayers():
 	players=["yaman","yanal","hawzan", "lobna"]
 	return render_template(
 		"index.html", 
-		players=players)
+		players=players,
+		likes_same_sport=True)
 
 
 

@@ -2,17 +2,24 @@
 <!doctype html> 
 	<html>
 		<head>
+			<title> jawzal's Webpage </title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 		</head>
 
 		<body> 
-			<h1> voleyball! </h1> 
+			{% if likes_same_sport==True %}
+			<h1> volleyball! </h1> 
+			<img src="https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Article+Image+Update/Volleyball/Volleyball+Passing+Drills/carousel.jpg" width="250" height="200" >
 			<p> it's fun </p> 
 			<h2> favorite players: </h2>
 			<ul>
                 {% for player in players %}
                 <li> {{player}} </li>
                 {% endfor %}
+            {% else %}
+            <h1> volleyball! </h1> 
+			<p> it's fun </p> 
+            {% endif %}
             </ul>
 
 		</body> 
